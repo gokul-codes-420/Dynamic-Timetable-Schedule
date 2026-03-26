@@ -2,7 +2,7 @@
 
 A sleek, responsive, and interactive timetable application that automatically highlights the current period based on the time of day.
 
-![Dynamic Timetable Preview](https://via.placeholder.com/800x400?text=Dynamic+Timetable+Preview) *Preview coming soon*
+View The Project - (https://gokul-codes-420.github.io/Dynamic-Timetable-Schedule/)
 
 ## ✨ Features
 
