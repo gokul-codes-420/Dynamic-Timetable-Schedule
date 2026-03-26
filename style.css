@@ -1,0 +1,107 @@
+        :root {
+            --primary: #3b82f6;
+            --accent: #f59e0b; 
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #1e293b;
+            --muted: #64748b;
+            --border: #e2e8f0;
+            --radius: 12px;
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background: var(--card);
+            padding: 24px;
+            border-radius: var(--radius);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border: 1px solid var(--border);
+            margin-top: 100px;
+        }
+
+        h1 { margin-top: 0; font-size: 1.5rem; text-align: center; color: var(--text); }
+
+        /* TABS CSS */
+        .tabs {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tab {
+            padding: 8px 16px;
+            border: 1px solid var(--border);
+            background: #fff;
+            border-radius: 20px;
+            cursor: pointer;
+            white-space: nowrap;
+            font-weight: 500;
+            transition: all 0.2s;
+            color: var(--muted);
+        }
+
+        .tab.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* SCHEDULE CSS */
+        .schedule {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .period {
+            padding: 16px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .period:hover {
+            border-color: var(--primary);
+            background: #f1f5f9;
+        }
+
+        /* HIGHLIGHT CSS */
+        .period.highlight {
+            border-color: var(--accent);
+            background: #fffbeb;
+            transform: scale(1.02);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.1);
+        }
+
+        .period-info h3 { margin: 0; font-size: 1rem; }
+        .period-info p { margin: 4px 0 0; font-size: 0.85rem; color: var(--muted); }
+        .period-time {
+            font-weight: 600;
+            font-size: 0.85rem;
+            background: #f1f5f9;
+            padding: 4px 8px;
+            border-radius: 6px;
+        }
+
+        @media (max-width: 480px) {
+            .tabs { justify-content: flex-start; }
+        }
